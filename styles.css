@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Montez&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montez&family=Spartan:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --green-one: #006466;
+  --green-two: #065a60;
+  --green-three: #0b525b;
+  --green-four: #144552;
+  --green-five: #1b3a4b;
+  --green-six: #212f45;
+  --purple-one: #272640;
+  --purple-two: #312244;
+  --purple-three: #3e1f47;
+  --purple-four: #4d194d;
+  --font-one: hsl(240, 1%, 86%);
+  --gradient: linear-gradient(180deg, var(--purple-four), var(--green-one));
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Montez", cursive;
+  font-size: 20px;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* navbar styles */
+#nav-bar {
+  width: 100%;
+  position: absolute;
+  background: transparent;
+  z-index: 1;
+  padding-right: 2rem;
+  color: var(--font-one);
+  font-family: "Spartan";
+  font-weight: 300;
+}
+#nav-bar a {
+  text-decoration: none;
+  color: var(--font-one);
+  display: inline-block;
+  margin: 15px 25px;
+  overflow: hidden;
+  height: 25px;
+}
+#nav-bar a span {
+  display: inline-block;
+  position: relative;
+  transition: transform 500ms cubic-bezier(0.25, 0.75, 0.5, 1.25);
+  -webkit-transition: -webkit-transform 500ms
+    cubic-bezier(0.25, 0.75, 0.5, 1.25);
+  -moz-transition: transform 500ms cubic-bezier(0.25, 0.75, 0.5, 1.25);
+}
+#nav-bar a span:after {
+  content: attr(data-hover);
+  position: absolute;
+  top: -30px;
+  left: 0;
+  transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+#nav-bar a:hover span,
+#nav-bar a:focus span {
+  transform: translateY(30px);
+  -webkit-transform: translateY(30px);
+  -moz-transform: translateY(30px);
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: calc(0.15em + 1vw);
+}
+
+/* full scroll height setup */
+#scroll {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.page {
+  width: 100%;
+  height: 100vh;
+}
+
+/* landing page styles */
+.landing-page {
+  background-color: var(--purple-one);
+  color: hsl(240, 1%, 86%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hello {
+  text-align: center;
+}
+.hello h1 {
+  font-size: 4.75em;
+}
+.hello p {
+  font-size: 1.5em;
+}
+
+/* about me styles */
+.about-me {
+  background-color: var(--green-three);
+}
+.about-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-flex-wrap {
+  display: flex;
+  margin: 0 auto;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-left: 134px;
+}
+.about-text {
+  background-color: #854545;
+  position: relative;
+  height: 70%;
+  width: 610px;
+  border: 1px solid;
+}
+.about-title {
+  position: relative;
+  top: -32%;
+  right: -5%;
+  font-size: 1.5em;
+}
+.about-graphic {
+  position: relative;
+  background-color: white;
+  height: 350px;
+  width: 300px;
+  top: 0;
+  right: 20%;
+  border: 1px solid;
+}
+/* projects styles */
+.projects {
+  background-color: var(--purple-three);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.projects-title {
+  color: var(--font-one);
+  font-size: 3em;
+}
+.card-container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.project-card {
+  font-family: "Spartan";
+  border-radius: 0.3rem;
+  margin: 2rem;
+  width: 25%;
+  height: 100%;
+  min-width: 268px;
+  min-height: 442px;
+  max-width: 299.4px;
+  max-height: 457.9px;
+  font-size: 0.7em;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 0.0625em 0.0625em,
+    rgba(255, 255, 255, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  display: flex;
+  flex-direction: column;
+}
+.card-title {
+  padding: 0.5rem;
+  text-align: center;
+  border-bottom: 1px solid;
+  background-color: #f8f4ff;
+  border-radius: 0.3rem 0.3rem 0 0;
+  font-weight: bold;
+  font-size: calc(0.6em + 0.5vw);
+}
+.card-img {
+  width: 90%;
+  height: 50%;
+  margin: 0 auto;
+}
+.card-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.3rem;
+  border: 1px solid #dbd7d2;
+}
+
+.card-body {
+  background-color: #ffffff;
+  padding: 1rem 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card-description {
+  text-align: center;
+  margin: 1rem 0.25rem;
+  height: auto;
+}
+.card-languages-title {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 20px;
+}
+.card-languages {
+  margin-top: 0.5em;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+.card-bottom {
+  border-top: 1px solid;
+  background-color: #f8f4ff;
+  border-radius: 0 0 0.3rem 0.3rem;
+  padding-bottom: 0.5rem;
+}
+/* connect styles */
+.connect {
+  background-color: var(--green-six);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-one);
+}
+.connect-content {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.me {
+  width: 25%;
+  height: auto;
+  border-radius: 0.3rem;
+}
+.connect-info h3 {
+  margin: 1rem 0 2rem 0;
+}
+.connect-info {
+  width: 60%;
+  margin: 1rem auto;
+  font-size: 1.5em;
+}
+.connect-links {
+  width: 80%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-around;
+}
+.connect-links img {
+  transition: all 0.5s ease-out;
+}
+.connect-links a img:hover {
+  transform: translateY(-5px) scale(1.1);
+}
