@@ -7,32 +7,26 @@ const pageThree = document.getElementById("four");
 
 linkOne.addEventListener("click", () => {
     pageOne.scrollIntoView({
-        behavior: "smooth",
-        block: "end",
-        inline: "nearest"
+        behavior: "smooth"
     });
 })
 linkTwo.addEventListener("click", () => {
     pageTwo.scrollIntoView({
-        behavior: "smooth",
-        block: "end",
-        inline: "nearest"
+        behavior: "smooth"
     });
 })
 linkThree.addEventListener("click", () => {
     pageThree.scrollIntoView({
-        behavior: "smooth",
-        block: "end",
-        inline: "nearest"
+        behavior: "smooth"
     });
 })
 
 function ScrollHandler(pageId) {
-    const page = document.getElementById(pageId);
+    let page = document.getElementById(pageId);
     let pageStart = page.offsetTop;
     let pageJump = false;
     let viewStart;
-    const duration = 1200;
+    let duration = 1200;
     let scrolled = document.getElementById("scroll");
 
     function scrollToPage() {
