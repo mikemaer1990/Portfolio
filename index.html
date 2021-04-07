@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css">
     <title>Michael Maertens</title>
 </head>
@@ -12,17 +12,34 @@
 <body>
     <nav id="nav-bar">
         <label for="checkbox" class="hamburger">
-            <input type="checkbox" id="checkbox">
+            <input type="checkbox" id="checkbox" autocomplete="off" />
             <span class="line line-one"></span>
             <span class="line line-two"></span>
             <span class="line line-three"></span>
         </label>
+        <span class="divider"></span>
         <div class="nav-links">
-            <a href="#one" id="linkZero"><span data-hover="Home">Home</span></a>
-            <a href="#two" id="linkOne"><span data-hover="About">About</span></a>
-            <a href="#three" id="linkTwo"><span data-hover="Projects">Projects</span></a>
-            <a href="#four" id="linkThree"><span data-hover="Contact">Contact</span></a>
+            <a href="#one" id="linkZero" class="nav-link"><img class="home-img" src="./imgs/home.png" alt="home png"
+                    width="22px" height="22px"><span data-hover="Home">Home</span></a>
+            <a href="#two" id="linkOne" class="nav-link"><img class="home-img" src="./imgs/about.png" alt="about png"
+                    width="22px" height="22px"><span data-hover="About">About</span></a>
+            <a href="#three" id="linkTwo" class="nav-link"><img class="home-img" src="./imgs/layers.png"
+                    alt="layers png" width="22px" height="22px"><span data-hover="Projects">Projects</span></a>
+            <a href="#four" id="linkThree" class="nav-link"><img class="home-img" src="./imgs/contact.png"
+                    alt="contact png" width="22px" height="22px"><span data-hover="Contact">Contact</span></a>
         </div>
+        <span class="dividerTwo"></span>
+        <div class="contact-links">
+            <a href="#"><img src="./imgs/github.png" alt="github logo" width="30px" height="30px" title="GitHub"></a>
+            <a href="#"><img src="./imgs/codepen.png" alt="codepen logo" width="30px" height="30px" title="Codepen"></a>
+            <a href="#"><img src="./imgs/fcc.png" alt="fcc logo" width="35px" height="30px" title="freeCodeCamp"></a>
+            <a href="mailto:michaelmaertens@protonmail.com"><img src="./imgs/email.png" alt="email logo" width="35px"
+                    height="30px" title="Email Me"></a>
+        </div>
+        <span class="dividerThree"></span>
+        <p class="copy">&copy;2021 Michael Maertens</p>
+        </div>
+
     </nav>
     <main id="main">
         <div id="scroll">
@@ -40,7 +57,12 @@
                         <div class="about-me-pic">
                             <div class="about-me-person">
                                 <div class="head">
-                                    <div class="hair"></div>
+                                    <!-- <div class="hat"></div> -->
+                                    <div class="hair">
+                                        <div class="hair-1"></div>
+                                        <div class="hair-2"></div>
+                                        <div class="hair-3"></div>
+                                    </div>
                                     <div class="eye-left"></div>
                                     <div class="eye-right"></div>
                                     <div class="nose"></div>
@@ -128,12 +150,11 @@
                         <div class="card-bottom">
                             <h3 class="card-languages-title">Created With:</h3>
                             <div class="card-languages">
-                                <img src="./imgs/html.png" alt="python logo" width="50px" height="50px">
-                                <img src="./imgs/css.png" alt="python logo" width="50px" height="50px">
-                                <img src="./imgs/js.png" alt="python logo" width="50px" height="50px">
+                                <img src="./imgs/html.png" alt="python logo" width="50px" height="50px" title="HTML">
+                                <img src="./imgs/css.png" alt="css logo" width="50px" height="50px" title="CSS">
+                                <img src="./imgs/js.png" alt="js logo" width="50px" height="50px" title="Javascript">
                             </div>
                         </div>
-
                     </div>
                     <div class="project-card">
                         <div class="card-title">
@@ -152,9 +173,9 @@
                         <div class="card-bottom">
                             <h3 class="card-languages-title">Created With:</h3>
                             <div class="card-languages">
-                                <img src="./imgs/html.png" alt="python logo" width="50px" height="50px">
-                                <img src="./imgs/css.png" alt="python logo" width="50px" height="50px">
-                                <img src="./imgs/js.png" alt="python logo" width="50px" height="50px">
+                                <img src="./imgs/html.png" alt="python logo" width="50px" height="50px" title="HTML">
+                                <img src="./imgs/css.png" alt="css logo" width="50px" height="50px" title="CSS">
+                                <img src="./imgs/js.png" alt="js logo" width="50px" height="50px" title="Javascript">
                             </div>
                         </div>
 
@@ -178,9 +199,12 @@
                         <div class="card-bottom">
                             <h3 class="card-languages-title">Created With:</h3>
                             <div class="card-languages">
-                                <img src="./imgs/python.png" alt="python logo" width="50px" height="50px">
-                                <img src="./imgs/flask.png" alt="python logo" width="45px" height="45px">
-                                <img src="./imgs/postgres.png" alt="python logo" width="50px" height="50px">
+                                <img src="https://png2.cleanpng.com/sh/39b23d0a7e695fc1649d09cad9103354/L0KzQYm3VMEzN6prj5H0aYP2gLBuTgB6fJl0hp95cnBqgrL0jflvb15xedDwdXHqdX7qjB1xfaVqip95cnBqgrL0jflvb15xedDwdXHqdX68gfNnbJQ4Tqc7OULkRnA9WcE2OWE9UaMAMkO4R4KAVsY0O2k3RuJ3Zx==/kisspng-python-programming-language-computer-programming-language-5acfdc365292a6.6915108915235717663382.png"
+                                    alt="python logo" width="50px" height="50px" title="Python">
+                                <img src="https://png2.cleanpng.com/sh/981e5046007cc12efef97d96ea0454c9/L0KzQYm3V8EzN6J5e5H0aYP2gLBuTfZtaaRwReJEdHjyfn7AhfIubqNmhddCb4LuPcjsgr1ieKFxgdVqdHnyfn7ojfVzcZRmhp9qcoSwRbO7V8YzapVmTqo7NUOxR4S8U8M5OmE2TaU6NEC3SYmCVsgzNqFzf3==/kisspng-flask-python-web-framework-web-application-american-art-5b4762bda68253.735338201531404989682.png"
+                                    alt="flask logo" width="50px" height="50px" title="Flask">
+                                <img src="https://png2.cleanpng.com/sh/0a59f58dc2b0ee3d9e047655baf29c01/L0KzQYm3VME2N6NBfZH0aYP2gLBuTgBwe6Vsitd8cXywgLjohP1qdl5oh995dYTogn7wgB9ve15peeZqYnH2dX7rhgBmdpVqRdd1ZYDrcbB7k702aZU4UKhsNEe3c4fpVb42OWUASKU7NEG4QoSBUcIxO2c5T6o8LoDxd1==/kisspng-postgresql-pgadmin-computer-icons-database-depende-elephants-5ad386c474c6b5.5149032415238120364783.png"
+                                    alt="postgresql logo" width="50px" height="50px" title="PostgreSQL">
                             </div>
                         </div>
                     </div>
@@ -192,23 +216,22 @@
                     <img class="me" src="./imgs/me.JPG" alt="pic of me">
                     <div class="connect-info">
                         <h3>Let's Work Together</h3>
-                        <p>Full-stack web developer living in the GTA. I exist in a world with no limits, always trying
-                            to find ways to improve and grow. I’m a self-taught, self-motivating problem-solver looking
-                            to contribute to the world by way of design.</p>
+                        <p>Full-stack web developer living in the GTA. I like to think that our lives are limitless, and
+                            I am always trying to find ways to improve myself and grow. I’m a self-taught,
+                            self-motivating problem-solver looking to contribute to the world via code.</p>
                         <div class="connect-links">
                             <a href="#"><img src="./imgs/github.png" alt="github logo" width="50px" height="50px"></a>
-                            <a href="#"><img src="./imgs/linkedin.png" alt="linkedin logo" width="50px"
-                                    height="50px"></a>
                             <a href="#"><img src="./imgs/codepen.png" alt="codepen logo" width="50px" height="50px"></a>
                             <a href="#"><img src="./imgs/fcc.png" alt="fcc logo" width="60px" height="50px"></a>
-                            <a href="#"><img src="./imgs/twt.png" alt="twitter logo" width="50px" height="50px"></a>
+                            <a href="mailto:michaelmaertens@protonmail.com"><img src="./imgs/email.png" alt="email logo"
+                                    width="50px" height="50px" title="Email Me"></a>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
     </main>
-
+    <script type="text/javascript" src="app.js"></script>
 </body>
 
 </html>
