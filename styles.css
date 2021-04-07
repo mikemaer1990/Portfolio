@@ -20,8 +20,11 @@
   box-sizing: border-box;
 }
 
+body,
 html {
   overflow-x: hidden;
+}
+html {
   width: 100%;
   height: 100%;
 }
@@ -29,7 +32,6 @@ html {
   scrollbar-width: none;
 }
 body {
-  overflow-x: hidden;
   font-family: "Montez", cursive;
   font-size: 20px;
   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
