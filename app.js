@@ -26,7 +26,7 @@ $(document).ready(function () {
             'position': 'right',
             'tooltips': ['Home', 'About Me', 'Projects', 'Contact']
         },
-        loopBottom: true,
-        loopTop: true
+        // loopBottom: true,
+        // loopTop: true
     });
 });
