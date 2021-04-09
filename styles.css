@@ -27,6 +27,7 @@ html {
 html {
   width: 100%;
   height: 100%;
+  scroll-behavior: smooth;
 }
 * {
   scrollbar-width: none;
@@ -116,8 +117,9 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   transition: all 500ms cubic-bezier(0.25, 0.25, 0.5, 1.25);
   overflow: hidden;
   border-left: 1px solid white;
+  z-index: 9999;
 }
-#nav-bar.active {
+#nav-bar.nav-active {
   right: -10px;
 }
 #nav-bar .nav-links a {
@@ -226,23 +228,12 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   margin: 5px;
 }
 /* navbar body styles */
-
-section {
-  scroll-snap-align: start;
+#pp-nav li .active span,
+.pp-slidesNav .active span {
+  background: #f8f4ff60;
 }
-/* full scroll height setup */
-#scroll {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
+.section {
   overflow-x: hidden;
-  scroll-behavior: smooth;
-  -ms-scroll-snap-type: mandatory;
-  scroll-snap-type: mandatory;
-  -ms-scroll-snap-points-y: repeat(100vh);
-  -ms-scroll-snap-type: y mandatory;
-  scroll-snap-type: y mandatory;
 }
 .page {
   width: 100%;
@@ -271,16 +262,17 @@ section {
 .about-me {
   background-color: var(--green-one);
   color: var(--font-one);
-  display: flex;
+  display: block;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 .about-me-wrap {
   text-align: center;
   height: 100%;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
 }
 .about-me-wrap h2 {
   font-size: 2.5em;
@@ -671,26 +663,24 @@ section {
   left: 0;
   border-radius: 0 0 2px 2px;
 }
-
 /* projects styles */
 .projects {
   background-color: var(--purple-two);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 0 2rem 0;
+  display: block;
+  padding: 2.25rem 0 0rem 0;
 }
 .projects-title {
   color: var(--font-one);
   font-size: 3em;
+  text-align: center;
 }
 .card-container {
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 4.5rem auto;
 }
 .project-card {
   font-family: "Spartan";
@@ -849,12 +839,13 @@ section {
     margin-top: 1rem;
     font-size: 1.5em;
   }
+}
+@media screen and (max-width: 1110px) {
   .card-container {
-    width: 100%;
-    padding-bottom: 3.5rem;
+    margin: 1rem auto;
   }
-  .card-title {
-    font-size: 1.05em;
+  .projects {
+    padding: 2rem 0 0 0;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -870,6 +861,22 @@ section {
   }
   .connect-links {
     width: 100%;
+  }
+}
+@media screen and (min-width: 490px) and (min-height: 810px) {
+  .about-me-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1110px) and (min-height: 800px) {
+  .projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 945px) {
@@ -893,18 +900,6 @@ section {
   .connect-info {
     width: 90%;
   }
-  /* #scroll {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    -ms-scroll-snap-type: none;
-    scroll-snap-type: none;
-    -ms-scroll-snap-points-y: none;
-    -ms-scroll-snap-type: none;
-    scroll-snap-type: none;
-  } */
 }
 @media screen and (max-width: 640px) {
   .connect-info {
@@ -922,8 +917,3 @@ section {
     width: 97.5%;
   }
 }
-/* @media screen and (max-height: 570px) {
-  .me {
-    min-width: 50%;
-  }
-} */
