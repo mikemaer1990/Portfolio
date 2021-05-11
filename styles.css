@@ -294,7 +294,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
 .about-me-info {
   padding: 2rem;
   width: 70%;
-  margin: 2.2rem auto 0 auto;
+  margin: 2.2rem auto 3rem auto;
   font-family: "Spartan";
   font-weight: 300;
   font-size: 0.8em;
