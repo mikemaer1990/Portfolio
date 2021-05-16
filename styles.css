@@ -488,7 +488,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   height: 65px;
   background-color: white;
   position: relative;
-  top: -8px;
+  top: -7px;
   left: -8px;
   border-radius: 10px 10px 0 0;
   z-index: 2;
@@ -516,7 +516,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   position: relative;
   bottom: 16px;
   width: 19px;
-  height: 60px;
+  height: 68px;
   background-color: white;
 }
 .hand-left {
@@ -587,7 +587,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   height: 42px;
   background-color: #2d5a7a;
   position: relative;
-  top: -75px;
+  top: -74px;
   left: -8px;
 }
 .belt {
